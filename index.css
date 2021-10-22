@@ -375,7 +375,7 @@ body hero .neptune {
 body hero .orbit {
   border-radius: 50%;
   position: absolute;
-  border: 1vw solid white;
+  border: 0.1vw solid white;
   z-index: -10;
 }
 
