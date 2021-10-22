@@ -195,15 +195,16 @@ function update(planet) {
 var cli=1;
 var g1=0;
 var g1=0;
-
+var id1=10;
 function myFunction(clicked_id){
     for(let i = 0 ; i < 9 ; i++){
         if(clicked_id == i){
             if(cli == 1){
                 document.getElementById("planet1").innerHTML = planets[i].name +"<br><br>";
                 gf1 = planets[i].gforce;
+                id1 = clicked_id;
                 cli++;
-            }else if(cli == 2){
+            }else if(cli == 2 && clicked_id != id1){
                 document.getElementById("planet2").innerHTML = planets[i].name +"<br><br>";
                 gf2 = planets[i].gforce;
                 cli++;
