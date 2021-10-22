@@ -18,11 +18,11 @@ body .loader {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   z-index: 1000;
 }
 
@@ -35,11 +35,11 @@ body header {
   display: flex;
   height: 7vw;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 body header .text {
@@ -53,13 +53,13 @@ body header .text ::after {
   position: absolute;
   width: 100%;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  transform: scaleX(0);
   height: 5px;
   bottom: 0;
   left: 0;
   background-color: #1900ff;
   -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  transform-origin: bottom right;
   -webkit-transition: -webkit-transform 0.25s ease-out;
   transition: -webkit-transform 0.25s ease-out;
   transition: transform 0.25s ease-out;
@@ -73,9 +73,9 @@ body header .text a {
 
 body header .text :hover:after {
   -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  transform: scaleX(1);
   -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+  transform-origin: bottom left;
 }
 
 body header h1 {
@@ -93,13 +93,13 @@ body header h1 ::after {
   position: absolute;
   width: 100%;
   -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  transform: scaleX(0);
   height: 5px;
   bottom: 0;
   left: 0;
   background-color: #1900ff;
   -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  transform-origin: bottom right;
   -webkit-transition: -webkit-transform 0.25s ease-out;
   transition: -webkit-transform 0.25s ease-out;
   transition: transform 0.25s ease-out;
@@ -113,9 +113,9 @@ body header h1 a {
 
 body header h1 :hover:after {
   -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  transform: scaleX(1);
   -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+  transform-origin: bottom left;
 }
 
 body header .logo {
@@ -130,11 +130,11 @@ body hero {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 70vh;
   padding: 1vw;
 }
@@ -150,7 +150,7 @@ body hero input {
   border: 0 solid;
   font-size: 2vw;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-          box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   outline: 1px solid;
   outline-color: rgba(255, 255, 255, 0.5);
   outline-offset: 0px;
@@ -162,7 +162,7 @@ body hero input {
 body hero input :hover {
   border: 1px solid;
   -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
-          box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388;
@@ -177,7 +177,7 @@ body hero .bubbly-button {
   margin-bottom: 30px;
   -webkit-appearance: none;
   -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   background-color: #ff0081;
   color: #fff;
   border-radius: 4px;
@@ -189,7 +189,7 @@ body hero .bubbly-button {
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s, -webkit-transform ease-in 0.1s, -webkit-box-shadow ease-in 0.25s;
   -webkit-box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
-          box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
 }
 
 body hero .bubbly-button a {
@@ -230,22 +230,22 @@ body hero .bubbly-button:after {
 
 body hero .bubbly-button:active {
   -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
   background-color: #e60074;
   -webkit-box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-          box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 }
 
 body hero .bubbly-button.animate:before {
   display: block;
   -webkit-animation: topBubbles ease-in-out 0.75s forwards;
-          animation: topBubbles ease-in-out 0.75s forwards;
+  animation: topBubbles ease-in-out 0.75s forwards;
 }
 
 body hero .bubbly-button.animate:after {
   display: block;
   -webkit-animation: bottomBubbles ease-in-out 0.75s forwards;
-          animation: bottomBubbles ease-in-out 0.75s forwards;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
 }
 
 @-webkit-keyframes topBubbles {
@@ -306,7 +306,7 @@ body hero .sun {
   background: #fc3;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.22, #cc9900), color-stop(1, #ffdb70));
   -webkit-box-shadow: 0 0 50px #c90;
-          box-shadow: 0 0 50px #c90;
+  box-shadow: 0 0 50px #c90;
 }
 
 body hero .planet {
@@ -335,7 +335,7 @@ body hero .earth {
 body hero .earth .moon {
   border: none;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   background: white;
   width: 0.8vw;
   height: 0.8vw;
