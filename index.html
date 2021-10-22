@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/SSERD/scss/index.css">
+    <link rel="stylesheet" href="index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div class="loader">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_tB5qur.json"  background="transparent"  speed="1"  style="width: 1000px; height: 1000px;"  loop  autoplay></lottie-player>    
+        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_tB5qur.json" background="transparent"
+            speed="1" style="width: 500px; height: 500px;" loop autoplay></lottie-player>
     </div>
     <header>
         <div class="text"><a href="#">Weights On<br>Different<br>Worlds</a></div>
-        <h1 > <a href="#"> Planets To Compare</a></h1>
-        <div class="logo"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_wla6woxz.json"   speed="1"  style="width: 10vw; height: 10vw;" loop autoplay ></lottie-player></div>
+        <h1> <a href="#"> Planets To Compare</a></h1>
+        <div class="logo">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_wla6woxz.json" speed="1"
+                style="width: 10vw; height: 10vw;" loop autoplay></lottie-player>
+        </div>
     </header>
     <hero>
         <div class="p1">
             <label for="pl1" id="planet1">Planet 1<br><br></label>
-            <input type="text" id="pl1" name="pl1" value=""><br> 
+            <input type="text" id="pl1" name="pl1" value=""><br>
             <p>KG</p>
             <button class="bubbly-button" onclick="calculate()">GENERATE</button>
         </div>
-        
+
         <div class="solar">
-            <div class="sun planet" id="0" onclick="myFunction(this.id)" style="cursor: pointer;"></div></div>
-            <div class="mercury planet" id="1"onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-            <div class="venus planet" id="2"onclick="myFunction(this.id)"style="cursor: pointer;"></div>
-            <div class="earth planet" id="3" onclick="myFunction(this.id)" style="cursor: pointer;"><span class="moon"></span></div>
-            <div class="mars planet" id="4"onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-            <div class="jupiter planet" id="5"onclick="myFunction(this.id)"style="cursor: pointer;"></div>
-            <div class="saturn planet" id="6"onclick="myFunction(this.id)"style="cursor: pointer;"></div>
-            <div class="uranus planet" id="7"onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-            <div class="neptune planet" id="8"onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-            <div class="orbit1 orbit"></div>
-            <div class="orbit2 orbit"></div>
-            <div class="orbit3 orbit"></div>
-            <div class="orbit4 orbit"></div>
-            <div class="orbit5 orbit"></div>
-            <div class="orbit6 orbit"></div>
-            <div class="orbit7 orbit"></div>
-            <div class="orbit8 orbit"></div>
-            <div class="astroid orbit"></div>
+            <div class="sun planet" id="0" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
         </div>
-        
+        <div class="mercury planet" id="1" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+        <div class="venus planet" id="2" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+        <div class="earth planet" id="3" onclick="myFunction(this.id)" style="cursor: pointer;"><span
+                class="moon"></span></div>
+        <div class="mars planet" id="4" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+        <div class="jupiter planet" id="5" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+        <div class="saturn planet" id="6" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+        <div class="uranus planet" id="7" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+        <div class="neptune planet" id="8" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+        <div class="orbit1 orbit"></div>
+        <div class="orbit2 orbit"></div>
+        <div class="orbit3 orbit"></div>
+        <div class="orbit4 orbit"></div>
+        <div class="orbit5 orbit"></div>
+        <div class="orbit6 orbit"></div>
+        <div class="orbit7 orbit"></div>
+        <div class="orbit8 orbit"></div>
+        <div class="astroid orbit"></div>
+        </div>
+
         <div class="p2">
             <label for="pl2" id="planet2">Planet 2<br><br></label>
             <input type="text" id="pl2" name="pl2" value=""><br>
             <p>KG</p>
             <button class="bubbly-button" onClick="window.location.reload();">RESET</button>
         </div>
-        
+
     </hero>
     <footer>
         <script src="index.js" type="text/javascript"></script>
     </footer>
     <script>
-        setTimeout(function(){
+        setTimeout(function () {
             $('.loader').fadeToggle(900);
-        },3000);
+        }, 3000);
     </script>
 </body>
+
 </html>
