@@ -217,7 +217,15 @@ function calculate(){
     weight = weight*gf2/gf1;
     $("#pl2").val(weight);
 }
-
+document.getElementById("reset").addEventListener('click', reset);
+function reset(){
+    document.getElementById("pl1").value="";
+    document.getElementById("pl2").value="";
+    document.getElementById("planet1").innerHTML = "Planet1<br><br>"
+    document.getElementById("planet2").innerHTML = "Planet2<br><br>"
+    cli = 1;
+    gf1 = gf2 = 0;
+}
 
 setInterval(() => {
     planets.forEach(update);
