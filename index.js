@@ -217,7 +217,7 @@ function calculate(){
     var weight = $("#pl1").val();
     weight = weight*gf2/gf1;
     $("#pl2").val(weight);
-    id1=10;
+    
 }
 document.getElementById("reset").addEventListener('click', reset);
 function reset(){
@@ -227,6 +227,7 @@ function reset(){
     document.getElementById("planet2").innerHTML = "Planet2<br><br>"
     cli = 1;
     gf1 = gf2 = 0;
+    id1=10;
 }
 
 setInterval(() => {
