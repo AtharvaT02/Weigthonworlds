@@ -217,6 +217,7 @@ function calculate(){
     var weight = $("#pl1").val();
     weight = weight*gf2/gf1;
     $("#pl2").val(weight);
+    id1=10;
 }
 document.getElementById("reset").addEventListener('click', reset);
 function reset(){
