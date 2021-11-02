@@ -36,25 +36,25 @@
 
         <div class="solar">
             <div class="sun planet" id="0" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-        
-        <div class="mercury planet" id="1" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-        <div class="venus planet" id="2" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-        <div class="earth planet" id="3" onclick="myFunction(this.id)" style="cursor: pointer;"><span
-                class="moon"></span></div>
-        <div class="mars planet" id="4" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-        <div class="jupiter planet" id="5" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-        <div class="saturn planet" id="6" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-        <div class="uranus planet" id="7" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-        <div class="neptune planet" id="8" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
-        <div class="orbit1 orbit"></div>
-        <div class="orbit2 orbit"></div>
-        <div class="orbit3 orbit"></div>
-        <div class="orbit4 orbit"></div>
-        <div class="orbit5 orbit"></div>
-        <div class="orbit6 orbit"></div>
-        <div class="orbit7 orbit"></div>
-        <div class="orbit8 orbit"></div>
-        <div class="astroid orbit"></div>
+
+            <div class="mercury planet" id="1" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+            <div class="venus planet" id="2" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+            <div class="earth planet" id="3" onclick="myFunction(this.id)" style="cursor: pointer;"><span
+                    class="moon"></span></div>
+            <div class="mars planet" id="4" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+            <div class="jupiter planet" id="5" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+            <div class="saturn planet" id="6" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+            <div class="uranus planet" id="7" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+            <div class="neptune planet" id="8" onclick="myFunction(this.id)" style="cursor: pointer;"></div>
+            <div class="orbit1 orbit"></div>
+            <div class="orbit2 orbit"></div>
+            <div class="orbit3 orbit"></div>
+            <div class="orbit4 orbit"></div>
+            <div class="orbit5 orbit"></div>
+            <div class="orbit6 orbit"></div>
+            <div class="orbit7 orbit"></div>
+            <div class="orbit8 orbit"></div>
+            <div class="astroid orbit"></div>
         </div>
 
         <div class="p2">
@@ -65,52 +65,64 @@
         </div>
         <section>
             <p>
-                Scroll To Learn More 
+                Scroll To Learn More
             </p>
         </section>
     </hero>
     <section class="info">
         <h2>How It Works</h2>
-        <p>First lets talk about mass. What is mass? The mass of an object is a measure of the object's inertial property, or the amount of matter it contains. That means mass of object is always constant indefendent of place , temperature or any other surrounding factor.
-            So now the question is what is weight? In science and engineering, the weight of an object is the force acting on the object due to gravity of  the planet, star or sattelite on which the body is present.
+        <p>First lets talk about mass. What is mass? The mass of an object is a measure of the object's inertial
+            property, or the amount of matter it contains. That means mass of object is always constant indefendent of
+            place , temperature or any other surrounding factor.
+            So now the question is what is weight? In science and engineering, the weight of an object is the force
+            acting on the object due to gravity of the planet, star or sattelite on which the body is present.
             Lets see how weight is calculated..<br>
-            Assume we have a body of mass M on the planet with gravitaitonal force g and we have to calculate its weight W. Therefore wieght of the body on the planet will be
-                                                                                                              <div>W = M x g</div>
+            Assume we have a body of mass M on the planet with gravitaitonal force g and we have to calculate its weight
+            W. Therefore wieght of the body on the planet will be
+            <div>W = M x g</div>
             We can see through this that weight depends on the G i.e. gravitational force of the planet.<br>
-            lets talk about gravitational force of planet whose mass is Mp , radius is R and it have gravitational force g which is calculated as
-                                                                                                            <div>g = GxM/R<sup>2</sup></div>  
+            lets talk about gravitational force of planet whose mass is Mp , radius is R and it have gravitational force
+            g which is calculated as
+            <div>g = GxM/R<sup>2</sup></div>
             where G is a Universal Gravitational Constant.<br>
-            As every planet and star will have different M and different R they all will have different g which will result in different weight of body.<br>
+            As every planet and star will have different M and different R they all will have different g which will
+            result in different weight of body.<br>
             Click <a href="https://en.wikipedia.org/wiki/Weight">HERE</a> to learn more.<br></p>
     </section>
     <section class="gravity">
         <div class="container">
-            
+
             <div class="comp1">
                 <h2 align="center">Planet 1</h2>
                 <div class="inputcomp1" align="right">
                     <label for="mass1" id="mass1">Mass of planet<br><br></label>
-                    <input type="text" id="m1" name="m1" value=""><br><br><br>
+                    <input type="text" id="m1" name="m1" value="">
+                    <p>KG</p><br>
                     <label for="rad1" id="rad1">Radius of planet<br><br></label>
-                    <input type="text" id="r1" name="r1" value=""><br><br><br>
-                    <button class="bubbly-button" id="button1">Calculate</button><br><br>
+                    <input type="text" id="r1" name="r1" value="">
+                    <p>Meter</p>
+                    <button class="bubbly-button" id="button1">Calculate</button><br>
                     <label for="g1" id="g1">Gravitational Force of planet<br><br></label>
-                    <input type="text" class="gaf1" id="gaf1" name="gaf1" value=""><br><br><br>
+                    <input type="text" class="gaf1" id="gaf1" name="gaf1" value="">
+                    <p>N/KG</p>
                 </div>
-                <img src="assests/comp1.svg" alt="" class="img1">
+                <img src="/assests/comp1.svg" alt="" class="img1">
             </div>
             <div class="comp2">
                 <h2 align="center">Planet 2</h2>
                 <div class="inputcomp2" align="left">
                     <label for="mass2" id="mass2">Mass of planet<br><br></label>
-                    <input type="text" id="m2" name="m2" value=""><br><br><br>
+                    <input type="text" id="m2" name="m2" value="">
+                    <p>KG</p><br>
                     <label for="r2" id="rad2">Radius of planet<br><br></label>
-                    <input type="text" id="r2" name="r2" value=""><br><br><br>
-                    <button class="bubbly-button" id="button2">Calculate</button><br><br>
+                    <input type="text" id="r2" name="r2" value="">
+                    <p>Meter</p>
+                    <button class="bubbly-button" id="button2">Calculate</button><br>
                     <label for="g2" id="g2">Gravitational Force of planet<br><br></label>
-                    <input type="text" class="gaf2" id="gaf2" name="gaf2" value=""><br><br><br>
+                    <input type="text" class="gaf2" id="gaf2" name="gaf2" value="">
+                    <p>N/KG</p>
                 </div>
-                <img src="assests/comp2.svg" alt="" class="img2">
+                <img src="/assests/comp2.svg" alt="" class="img2">
             </div>
         </div>
     </section>
