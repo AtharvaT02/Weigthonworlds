@@ -1,20 +1,4 @@
-var animateButton = function(e) {
 
-    e.preventDefault;
-    //reset animation
-    e.target.classList.remove('animate');
-    
-    e.target.classList.add('animate');
-    setTimeout(function(){
-      e.target.classList.remove('animate');
-    },700);
-  };
-  
-  var bubblyButtons = document.getElementsByClassName("bubbly-button");
-  
-  for (var i = 0; i < bubblyButtons.length; i++) {
-    bubblyButtons[i].addEventListener('click', animateButton, false);
-  }
 const sunX = window.innerWidth / 2 ;
 const sunY = window.innerHeight*(1/2 -0.1);
 const sun = document.querySelector('.sun');
@@ -167,6 +151,7 @@ const suno = {
     radius: 0,
     el: document.querySelector('.solar')
 }
+let gconst = 6.6743 * Math.pow(10,-11);
 const planets = [
     suno,
     mercury,
@@ -228,7 +213,20 @@ function reset(){
     gf1 = gf2 = 0;
     id1=10;
 }
-
+document.getElementById("button1").addEventListener('click', gcalc1);
+function gcalc1(){
+    var radius1 = $("#r1").val();
+    var mass1 = $("#m1").val();
+    let gf1= gconst*mass1/Math.pow(radius1,2);
+    $("#gaf1").val(gf1);   
+}
+document.getElementById("button2").addEventListener('click', gcalc2);
+function gcalc2(){
+    var radius2= $("#r2").val();
+    var mass2 = $("#m2").val();
+    let gf2= gconst*mass2/Math.pow(radius2,2);
+    $("#gaf2").val(gf2);   
+}
 setInterval(() => {
     planets.forEach(update);
 },10)

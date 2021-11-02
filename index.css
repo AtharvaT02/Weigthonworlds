@@ -447,6 +447,10 @@ body .gravity .comp1 .inputcomp1 input {
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+body .gravity .comp1 .inputcomp1 .gaf1 {
+  width: 18vw;
+}
+
 body .gravity .comp1 .img1 {
   width: 15vw;
   position: absolute;
@@ -488,6 +492,10 @@ body .gravity .comp2 .inputcomp2 input {
   text-shadow: none;
   -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+body .gravity .comp2 .inputcomp2 .gaf2 {
+  width: 18vw;
 }
 
 body .gravity .comp2 .img2 {
