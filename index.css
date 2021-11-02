@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400&display=swap");
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background-color: #22292F;
   padding: 0;
@@ -17,10 +27,12 @@ body .loader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  
-  justify-content: center;
-  
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 1000;
 }
 
@@ -31,11 +43,13 @@ body header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 7vw;
-
-  justify-content: space-between;
-
-  align-items: center;
+  height: 15vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body header .text {
@@ -48,16 +62,16 @@ body header .text ::after {
   content: '';
   position: absolute;
   width: 100%;
-
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
   height: 0.1vw;
   bottom: 0;
   left: 0;
   background-color: #1900ff;
-
-  transform-origin: bottom right;
-
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
   transition: -webkit-transform 0.25s ease-out;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
   transition: transform 0.25s ease-out;
   transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
@@ -68,10 +82,10 @@ body header .text a {
 }
 
 body header .text :hover:after {
-
-  transform: scaleX(1);
-
-  transform-origin: bottom left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 body header h1 {
@@ -88,15 +102,15 @@ body header h1 ::after {
   content: '';
   position: absolute;
   width: 100%;
-
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
   height: 0.1vw;
   bottom: 0;
   left: 0;
   background-color: #1900ff;
-
-  transform-origin: bottom right;
-
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
   transition: -webkit-transform 0.25s ease-out;
   transition: transform 0.25s ease-out;
   transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
@@ -108,10 +122,10 @@ body header h1 a {
 }
 
 body header h1 :hover:after {
-
-  transform: scaleX(1);
-
-  transform-origin: bottom left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 body header .logo {
@@ -125,12 +139,15 @@ body hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-  height: 70vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85vh;
   padding: 1vw;
+  position: relative;
 }
 
 body hero label {
@@ -143,23 +160,22 @@ body hero input {
   height: 2.5vw;
   border: 0 solid;
   font-size: 2vw;
-
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  background-color: #22292F;
+  color: white;
+  -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+          box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   outline: 1px solid;
   outline-color: rgba(255, 255, 255, 0.5);
   outline-offset: 0px;
   text-shadow: none;
-
+  -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-body hero input :hover {
-  border: 1px solid;
-
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
-  outline-color: rgba(255, 255, 255, 0);
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px #427388;
+body hero section {
+  position: absolute;
+  bottom: 0;
+  left: 43%;
 }
 
 body hero .bubbly-button {
@@ -169,252 +185,319 @@ body hero .bubbly-button {
   padding: 0.5em 1em;
   margin-top: 50px;
   margin-bottom: 30px;
-
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: #ff0081;
   color: #fff;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   position: relative;
-
-  transition: -webkit-transform ease-in 0.1s, -webkit-box-shadow ease-in 0.25s;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s, -webkit-transform ease-in 0.1s, -webkit-box-shadow ease-in 0.25s;
-  
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  -webkit-box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+          box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
 }
 
-body hero .bubbly-button a {
+body hero .bubbly-button .bubbly-button a {
   text-decoration: none;
   color: white;
 }
 
-body hero .bubbly-button:focus {
+body hero .bubbly-button .bubbly-button:focus {
   outline: 0;
 }
 
-body hero .bubbly-button:before, body hero .bubbly-button:after {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 140%;
-  height: 100%;
-  left: -20%;
-  z-index: -1000;
-
-  transition: all ease-in-out 0.5s;
-  background-repeat: no-repeat;
-}
-
-body hero .bubbly-button:before {
-  display: none;
-  top: -75%;
-  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
-}
-
-body hero .bubbly-button:after {
-  display: none;
-  bottom: -75%;
-  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
-}
-
-body hero .bubbly-button:active {
-
-  transform: scale(0.9);
-  background-color: #e60074;
-
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-}
-
-body hero .bubbly-button.animate:before {
-  display: block;
-
-  animation: topBubbles ease-in-out 0.75s forwards;
-}
-
-body hero .bubbly-button.animate:after {
-  display: block;
-
-  animation: bottomBubbles ease-in-out 0.75s forwards;
-}
-
-@-webkit-keyframes topBubbles {
-  0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-  }
-  50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
-  }
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
-  }
-}
-
-@keyframes topBubbles {
-  0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-  }
-  50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
-  }
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
-  }
-}
-
-@-webkit-keyframes bottomBubbles {
-  0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
-  }
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
-  }
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
-    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
-  }
-}
-
-@keyframes bottomBubbles {
-  0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
-  }
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
-  }
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
-    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
-  }
-}
-
-body hero .sun {
+body hero .solar .sun {
   width: 2vw;
   height: 2vw;
   background: #fc3;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.22, #cc9900), color-stop(1, #ffdb70));
-
-  box-shadow: 0 0 50px #c90;
+  -webkit-box-shadow: 0 0 50px #c90;
+          box-shadow: 0 0 50px #c90;
 }
 
-body hero .planet {
+body hero .solar .planet {
   border-radius: 50%;
   position: absolute;
 }
 
-body hero .mercury {
+body hero .solar .mercury {
   background: brown;
   width: 1vw;
   height: 1vw;
 }
 
-body hero .venus {
+body hero .solar .venus {
   background: #bf8639;
   width: 1.5vw;
   height: 1.5vw;
 }
 
-body hero .earth {
+body hero .solar .earth {
   background: #06c;
   width: 1.6vw;
   height: 1.6vw;
 }
 
-body hero .earth .moon {
-  border: none;
-
-  box-shadow: none;
-  background: white;
-  width: 0.8vw;
-  height: 0.8vw;
-  border-radius: 50%;
-}
-
-body hero .mars {
+body hero .solar .mars {
   background: rgba(185, 4, 4, 0.863);
   width: 1.5vw;
   height: 1.5vw;
 }
 
-body hero .jupiter {
+body hero .solar .jupiter {
   background: #e0ae6f;
   width: 2vw;
   height: 2vw;
 }
 
-body hero .saturn {
+body hero .solar .saturn {
   background: #dfd3a9;
   width: 1.8vw;
   height: 1.8vw;
 }
 
-body hero .uranus {
+body hero .solar .uranus {
   background: #c9d182;
   width: 1.7vw;
   height: 1.7vw;
 }
 
-body hero .neptune {
+body hero .solar .neptune {
   background: #77c2ec;
   width: 1.6vw;
   height: 1.6vw;
 }
 
-body hero .orbit {
+body hero .solar .orbit {
   border-radius: 50%;
   position: absolute;
   border: 0.1vw solid white;
   z-index: -10;
 }
 
-body hero .orbit1 {
+body hero .solar .orbit1 {
   width: 4vw;
   height: 4vw;
 }
 
-body hero .orbit2 {
+body hero .solar .orbit2 {
   width: 7vw;
   height: 7vw;
 }
 
-body hero .orbit3 {
+body hero .solar .orbit3 {
   width: 11vw;
   height: 11vw;
 }
 
-body hero .orbit4 {
+body hero .solar .orbit4 {
   width: 15vw;
   height: 15vw;
 }
 
-body hero .orbit5 {
+body hero .solar .orbit5 {
   width: 24vw;
   height: 24vw;
 }
 
-body hero .orbit6 {
+body hero .solar .orbit6 {
   width: 30vw;
   height: 30vw;
 }
 
-body hero .orbit7 {
+body hero .solar .orbit7 {
   width: 34vw;
   height: 34vw;
 }
 
-body hero .orbit8 {
+body hero .solar .orbit8 {
   width: 38vw;
   height: 38vw;
 }
 
-body hero .astroid {
+body hero .solar .astroid {
   width: 20vw;
   height: 20vw;
   border: 0.1vw dashed #ff6600;
+}
+
+body .info {
+  padding: 1vw;
+  height: 100vh;
+  font-size: 1.2vw;
+  text-align: center;
+  line-height: 5vh;
+}
+
+body .info h2 {
+  font-size: 2.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .info div {
+  color: #ff0081;
+  font-size: 2vw;
+}
+
+body .info a {
+  font-size: 1.5vw;
+  text-decoration: none;
+  font-weight: 700;
+  color: #0804ff;
+}
+
+body .info a:hover {
+  text-decoration: underline;
+}
+
+body .info a:active {
+  color: #3437ff;
+}
+
+body .info a:visited {
+  color: #2bff00;
+}
+
+body .gravity {
+  height: 100vh;
+  width: 100%;
+  padding: 1vw;
+  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .gravity .bubbly-button {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 0.5em;
+  padding: 0.5em 1em;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #ff0081;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  -webkit-box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+          box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+
+body .gravity .bubbly-button .bubbly-button a {
+  text-decoration: none;
+  color: white;
+}
+
+body .gravity .bubbly-button .bubbly-button:focus {
+  outline: 0;
+}
+
+body .gravity .comp1 {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  display: flexbox;
+  position: relative;
+  padding-right: 1vw;
+  border-right: 1px solid #ffffff;
+}
+
+body .gravity .comp1 h2 {
+  font-size: 2vw;
+  text-decoration: underline;
+}
+
+body .gravity .comp1 .inputcomp1 {
+  font-size: 1.5vw;
+  text-decoration: underline;
+}
+
+body .gravity .comp1 .inputcomp1 input {
+  width: 10vw;
+  height: 2.5vw;
+  border: 0 solid;
+  font-size: 1.5vw;
+  background-color: #22292F;
+  color: white;
+  -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+          box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+body .gravity .comp1 .img1 {
+  width: 15vw;
+  position: absolute;
+  bottom: 2vh;
+}
+
+body .gravity .comp2 {
+  float: right;
+  width: 50%;
+  height: 100vh;
+  display: flexbox;
+  position: relative;
+  border-left: 1px solid #ffffff;
+  padding-left: 1vw;
+}
+
+body .gravity .comp2 h2 {
+  font-size: 2vw;
+  text-decoration: underline;
+}
+
+body .gravity .comp2 .inputcomp2 {
+  font-size: 1.5vw;
+  text-decoration: underline;
+}
+
+body .gravity .comp2 .inputcomp2 input {
+  width: 10vw;
+  height: 2.5vw;
+  border: 0 solid;
+  font-size: 1.5vw;
+  background-color: #22292F;
+  color: white;
+  -webkit-box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+          box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+body .gravity .comp2 .img2 {
+  width: 20vw;
+  position: absolute;
+  bottom: 2vh;
+  right: 0;
+}
+
+body .data {
+  height: 102vh;
 }
 /*# sourceMappingURL=index.css.map */

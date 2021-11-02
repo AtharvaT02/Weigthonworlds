@@ -16,7 +16,7 @@ var animateButton = function(e) {
     bubblyButtons[i].addEventListener('click', animateButton, false);
   }
 const sunX = window.innerWidth / 2 ;
-const sunY = window.innerHeight / 2;
+const sunY = window.innerHeight*(1/2 -0.1);
 const sun = document.querySelector('.sun');
 sun.style.left = `${sunX - (0.01*window.innerWidth)}px`;
 sun.style.top = `${sunY - (0.01*window.innerWidth)}px`;
@@ -27,7 +27,7 @@ const mercury = {
     name: "MERCURY",
     gforce: 3.7,
     width: 1,
-    speed: -0.005,
+    speed: 0.005,
     theta: Math.random() * 2 * Math.PI,
     radius:  window.innerWidth * 0.02,
     el: document.querySelector('.mercury')
@@ -36,7 +36,7 @@ const venus = {
     name: "Venus",
     gforce: 8.8,
     width: 1.5,
-    speed: -0.004,
+    speed: 0.004,
     theta: Math.random() * 2 * Math.PI,
     radius:  window.innerWidth * 0.035,
     el: document.querySelector('.venus')
@@ -45,7 +45,7 @@ const earth = {
     name:'EARTH',
     gforce: 9.8,
     width:1.6, 
-    speed: -0.003,
+    speed: 0.003,
     theta: Math.random() * 2 * Math.PI,
     radius: window.innerWidth * 0.055,
     el: document.querySelector('.earth')
@@ -54,7 +54,7 @@ const mars = {
     name: "MARS",
     gforce: 3.7,
     width: 1.5,
-    speed: -0.0025,
+    speed: 0.0025,
     theta: Math.random() * 2 * Math.PI,
     radius: window.innerWidth * 0.075,
     el: document.querySelector('.mars')
@@ -63,7 +63,7 @@ const jupiter = {
     name: "JUPITER",
     gforce: 24.7,
     width: 2,
-    speed: -0.002,
+    speed: 0.002,
     theta: Math.random() * 2 * Math.PI,
     radius: window.innerWidth * 0.12,
     el: document.querySelector('.jupiter')
@@ -72,7 +72,7 @@ const saturn = {
     name: "SATURN",
     gforce: 10.5,
     width: 1.8,
-    speed: -0.001,
+    speed: 0.001,
     theta: Math.random() * 2 * Math.PI,
     radius: window.innerWidth * 0.15,
     el: document.querySelector('.saturn')
@@ -81,7 +81,7 @@ const uranus = {
     name: "URANUS",
     gforce: 9,
     width: 1.7,
-    speed: -0.0009,
+    speed: 0.0009,
     theta: Math.random() * 2 * Math.PI,
     radius: window.innerWidth * 0.17,
     el: document.querySelector('.uranus')
@@ -90,7 +90,7 @@ const neptune = {
     name: "NEPTUNE",
     gforce: 11.7,
     width: 1.6,
-    speed: -0.00085,
+    speed: 0.00085,
     theta: Math.random() * 2 * Math.PI,
     radius: window.innerWidth * 0.19,
     el: document.querySelector('.neptune')
@@ -153,7 +153,7 @@ const orbit8 = {
 }
 const astroid = {
     width: 20,
-    speed: 0,
+    speed: 0.001,
     theta: 0,
     radius: 0,
     el: document.querySelector('.astroid')
@@ -217,7 +217,6 @@ function calculate(){
     var weight = $("#pl1").val();
     weight = weight*gf2/gf1;
     $("#pl2").val(weight);
-    
 }
 document.getElementById("reset").addEventListener('click', reset);
 function reset(){
