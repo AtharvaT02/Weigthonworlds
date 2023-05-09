@@ -7,6 +7,86 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.l-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  width: 100%;
+  padding: 30px;
+  align-items: center;
+}
+.b-game-card {
+  position: relative;
+  z-index: 1;
+  height: 80%;
+  padding-bottom: 150%;
+  perspective: 1000px;
+}
+.b-game-card__cover {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-size: cover;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  transform-origin: top center;
+  will-change: transform;
+  transform: skewX(0.001deg);
+  transition: transform 0.35s ease-in-out;
+}
+.b-game-card__cover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(226deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 35%, rgba(255, 255, 255, 0.2) 42%, rgba(255, 255, 255, 0) 60%);
+  transform: translateY(-20%);
+  will-change: transform;
+  transition: transform 0.65s cubic-bezier(0.18, 0.9, 0.58, 1);
+}
+.b-game-card:hover .b-game-card__cover {
+  transform: rotateX(7deg) translateY(-6px);
+}
+.b-game-card:hover .b-game-card__cover::after {
+  transform: translateY(0%);
+}
+.b-game-card::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 12px 12px rgba(0, 0, 0, 0.4);
+  will-change: opacity;
+  transform-origin: top center;
+  transform: skewX(0.001deg);
+  transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
+}
+.b-game-card:hover::before {
+  opacity: 0.6;
+  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+
+    </style>
     <title>Weightsonworlds</title>
 </head>
 <body>
@@ -24,49 +104,45 @@
                 style="width: 10vw; height: 10vw;" loop autoplay></lottie-player>
         </div>
     </header>
-    <div class="gallery">
-        <img src="https://www.ed.ac.uk/sites/default/files/styles/landscape_breakpoints_theme_uoe_mobile_1x/public/thumbnails/image/cosmic_cliffs_high_res.png?itok=mkdaeYEQ">
-        <img src="https://www.pbs.org/wgbh/nova/media/images/new-eye-universe-img_VHKARf0.width-2000.jpg">
-
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfdKyxrk-sRvzXCGgYFN7TTq1GFypRbNdfsw&usqp=CAU">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs5ZQ8sJew9w7X8C-6oUcXSmjK_biNn00N2w&usqp=CAU">
-        <img src="https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fnature.2013.13743/MediaObjects/41586_2013_Article_BFnature201313743_Figa_HTML.jpg">
-        <img src="https://static.nationalgeographic.co.uk/files/styles/image_3200/public/webbtarantulanebula.jpg?w=1600&h=900">
-
-        <img src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2010/06/the_massive_compact_star_cluster_in_ngc_3603_and_its_surroundings2/18245403-2-eng-GB/The_massive_compact_star_cluster_in_NGC_3603_and_its_surroundings.jpg">
-        <img src="https://images.news18.com/ibnlive/uploads/2020/02/Space.jpg?impolicy=website&width=510&height=356">
+    <div class="l-container">
+      <div class="b-game-card">
+        <div class="b-game-card__cover" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL-aWw_eTzBYUcxJIEZR5SkVfD-jPnCmukGnOYkq3C2pma4ypF3nEGsLlz4qUfD1gvxdM&usqp=CAU);"></div>
       </div>
+      <div class="b-game-card">
+        <div class="b-game-card__cover" style="background-image: url(https://m.media-amazon.com/images/I/71hQFP+a5YL._SY550_.jpg);"></div>
+      </div>
+      <div class="b-game-card">
+        <div class="b-game-card__cover" style="background-image: url(data:image/jpeg;base64,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);"></div>
+      </div>
+      <div class="b-game-card">
+        <div class="b-game-card__cover" style="background-image: url(https://c4.wallpaperflare.com/wallpaper/108/337/89/earth-planet-portrait-display-space-art-wallpaper-preview.jpg);"></div>
+      </div>
+      <div class="b-game-card">
+        <div class="b-game-card__cover" style="background-image: url(https://wallpapercave.com/wp/wp9247459.jpg);"></div>
+      </div>
+    </div>
       <footer>
         <script src="index.js" type="text/javascript"></script>
-        
-        
-            <div class="footer-wrapper">
-              <div class="footer-logo">
-                <img src="assests/logo.png" alt="Logo">
-              </div>
-              <div class="footer-links">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="info.html">About</a></li>
-                  <li><a href="calculateG.html">Calculate G and Compare</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                </ul>
-              </div>
-              <div class="footer-social">
-                <ul>
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <p>&copy; 2023 Your Company. All Rights Reserved.</p>
-            </div>
-         
+  
+        <div class="footer-wrapper">
+          <div class="footer-logo">
+            <img src="assests/logo.png" alt="Logo" />
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="info.html">About</a></li>
+              <li><a href="calculateG.html">Calculate G</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="blogAll.html">Blogs</a></li>
+            </ul>
+          </div>
           
-    </footer>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Your Company. All Rights Reserved.</p>
+        </div>
+      </footer>
     <script>
 		
         setTimeout(function () {

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* Recent blogs */
+
+      .recent-blogs {
+        margin: 0 5vw;
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .recent-blogs h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+      }
+
+      .blogs {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+
+      .blogs article {
+        width: 25vw;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
+      }
+
+      .blogs article img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .blogs article h3 {
+        padding: 10px;
+        font-size: 24px;
+      }
+
+      .blogs article p {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      .blogs article a{
+        text-decoration: none;
+        color: #b8b2b2;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weightsonworlds</title>
+  </head>
+  <body>
+    <div class="loader">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player
+        src="https://assets2.lottiefiles.com/packages/lf20_tB5qur.json"
+        background="transparent"
+        speed="1"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+      ></lottie-player>
+    </div>
+    <header>
+      <div class="text">
+        <a href="#">Weights On<br />Different<br />Worlds</a>
+      </div>
+      <div class="logo">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player
+          src="https://assets9.lottiefiles.com/private_files/lf30_wla6woxz.json"
+          speed="1"
+          style="width: 10vw; height: 10vw"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+    </header>
+    <section class="recent-blogs">
+      <div class="container">
+        <h2>Recent blogs</h2>
+        <div class="blogs">
+          <article>
+            <a href="blog.html">
+              <img
+                src="https://vaidicphysics.org/wp-content/uploads/2022/06/Blog-Post4-1024x571.jpg"
+                alt="Blog image"
+              />
+              <h3>Vedic Research On Universe</h3>
+            </a>
+          </article>
+          <article>
+            <a href="blog.html">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="Blog image"
+              />
+              <h3>Universe: The Infinite</h3>
+            </a>
+          </article>
+          <article>
+            <a href="blog.html">
+              <img
+                src="https://github.blog/wp-content/uploads/2022/10/universeheader4.png?fit=1200%2C627"
+                alt="Blog image"
+              />
+              <h3>Github Universe</h3>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <script src="index.js" type="text/javascript"></script>
+
+      <div class="footer-wrapper">
+        <div class="footer-logo">
+          <img src="assests/logo.png" alt="Logo" />
+        </div>
+        <div class="footer-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">About</a></li>
+            <li><a href="calculateG.html">Calculate G</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blogAll.html">Blogs</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Your Company. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      setTimeout(function () {
+        $(".loader").fadeToggle(900);
+      }, 1000);
+    </script>
+  </body>
+</html>
