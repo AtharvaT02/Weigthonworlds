@@ -323,11 +323,12 @@ body hero .solar .astroid {
 }
 
 body .info {
-  padding: 1vw;
-  height: 100vh;
-  font-size: 1.2vw;
-  text-align: center;
-  line-height: 5vh;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 2rem;
 }
 
 body .info h2 {
@@ -509,3 +510,84 @@ body .data {
   height: 102vh;
 }
 /*# sourceMappingURL=index.css.map */
+
+footer {
+  background-color: #24282b;
+  color: #ffffff;
+  padding: 50px 0;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  max-width: 100px;
+  margin-bottom: 30px;
+}
+
+.footer-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social li {
+  margin: 0 10px;
+}
+
+.footer-social a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-social a:hover {
+  color: #ff4500;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
+.gallery {
+  margin: 15px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 4fr));
+  grid-gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
